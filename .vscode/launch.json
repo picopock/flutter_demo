@@ -1,0 +1,86 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter demo01",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo01/lib/main.dart"
+    },
+    {
+      "name": "Flutter demo02",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo02/lib/main.dart"
+    },
+    {
+      "name": "路由动画效果",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo03/lib/main.dart"
+    },
+    {
+      "name": "毛玻璃特效",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo04/lib/main.dart"
+    },
+    {
+      "name": "保持页面状态",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo05/lib/main.dart"
+    },
+    {
+      "name": "搜索条",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo06/lib/main.dart"
+    },
+    {
+      "name": "Wrap 流式布局",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo07/lib/main.dart"
+    },
+    {
+      "name": "展开闭合案例",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo08/lib/main.dart"
+    },
+    {
+      "name": "贝塞尔曲线切割",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo09/lib/main.dart"
+    },
+    {
+      "name": "打开应用的闪屏动画案例",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo10/lib/main.dart"
+    },
+    {
+      "name": "右滑返回上一页",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo11/lib/main.dart"
+    },
+    {
+      "name": "ToolTip控件",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo12/lib/main.dart"
+    },
+    {
+      "name": "Draggable控件",
+      "type": "dart",
+      "request": "launch",
+      "program": "demo13/lib/main.dart"
+    }
+  ]
+}
