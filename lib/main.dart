@@ -14,6 +14,9 @@ import './demos/demo11/right_back_demo.dart';
 import './demos/demo12/tool_tips_demo.dart';
 import './demos/demo13/draggable_demo.dart';
 import './demos/demo14/main.dart';
+import './demos/demo15/grid_list.dart';
+import './demos/demo16/dismissible_page.dart';
+import './demos/demo17/animated_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,6 +67,9 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 12, title: 'Tooltip'),
       ListItem(value: 13, title: '拖拽'),
       ListItem(value: 14, title: '圆形头像和圆角效果'),
+      ListItem(value: 15, title: 'Grid List'),
+      ListItem(value: 16, title: '滑动关闭'),
+      ListItem(value: 17, title: 'AnimatedList: 添加或删除，并伴有动画效果'),
     ]);
   }
 
@@ -86,6 +92,9 @@ class _MyAppState extends State<MyApp> {
         'demo12': (BuildContext context) => ToolTipDemo(),
         'demo13': (BuildContext context) => DraggableDemo(),
         'demo14': (BuildContext context) => CircleDemo(),
+        'demo15': (BuildContext context) => GridList(),
+        'demo16': (BuildContext context) => DismissiblePage(),
+        'demo17': (BuildContext context) => AnimatedListSample(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),
