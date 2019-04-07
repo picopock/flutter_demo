@@ -31,7 +31,8 @@ class _HTTPRequestState extends State<HTTPRequest> {
       appBar: AppBar(
         title: Text('dio 网络请求'),
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(10.0),
         child: Text(_weatherData),
       ),
     );
