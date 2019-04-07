@@ -17,6 +17,8 @@ import './demos/demo14/main.dart';
 import './demos/demo15/grid_list.dart';
 import './demos/demo16/dismissible_page.dart';
 import './demos/demo17/animated_list.dart';
+import './demos/demo18/read_write.dart';
+import './demos/demo19/network_request.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,15 +30,17 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerLeft,
-      decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
-      child: FlatButton(
-          child: Text(title),
-          onPressed: () {
-            Navigator.pushNamed(context, 'demo$value');
-          }),
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, 'demo$value');
+      },
+      child: Container(
+        alignment: Alignment.centerLeft,
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
+        child: Text(title),
+      ),
     );
   }
 }
@@ -70,6 +74,8 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 15, title: 'Grid List'),
       ListItem(value: 16, title: '滑动关闭'),
       ListItem(value: 17, title: 'AnimatedList: 添加或删除，并伴有动画效果'),
+      ListItem(value: 18, title: '读写文件: dart:io path_provider'),
+      ListItem(value: 19, title: '网络请求: dio'),
     ]);
   }
 
@@ -95,6 +101,8 @@ class _MyAppState extends State<MyApp> {
         'demo15': (BuildContext context) => GridList(),
         'demo16': (BuildContext context) => DismissiblePage(),
         'demo17': (BuildContext context) => AnimatedListSample(),
+        'demo18': (BuildContext context) => ReadAndWriteFile(),
+        'demo19': (BuildContext context) => HTTPRequest(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),

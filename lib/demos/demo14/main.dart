@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CircleDemo extends StatelessWidget {
   @override
@@ -54,14 +55,12 @@ class CircleDemo extends StatelessWidget {
                           'assets/images/20170118163218_28szy.jpeg')),
                 ),
               ),
-              // GridView.count(
-              //   crossAxisCount: 3,
-              //   children: List.generate(100, (int index) {
-              //     return Center(
-              //         child: Text('Item $index',
-              //             style: Theme.of(context).textTheme.headline));
-              //   }),
-              // )
+              FlatButton(
+                onPressed: () {
+                  launch('https://flutter.io');
+                },
+                child: Text('点击打开浏览器'),
+              )
             ],
           ),
         ),
