@@ -21,10 +21,10 @@ class DismissiblePage extends StatelessWidget {
               color: Colors.red,
             ),
             onDismissed: (direction) {
-              items.removeAt(index);
+              items.removeAt(item.indexOf(item));
               // 底部上滑出一个小部件
               Scaffold.of(context).showSnackBar(SnackBar(
-                content: new Text("$item dismissed"),
+                content: Text("$item dismissed"),
                 backgroundColor: Colors.blue,
                 duration: Duration(milliseconds: 500),
               ));
