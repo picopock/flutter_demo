@@ -19,6 +19,10 @@ import './demos/demo16/dismissible_page.dart';
 import './demos/demo17/animated_list.dart';
 import './demos/demo18/read_write.dart';
 import './demos/demo19/network_request.dart';
+import './demos/demo20/platform_channel.dart';
+import './demos/demo21/demo21.dart';
+import './demos/demo22/demo22.dart';
+import './demos/demo23/demo23.dart';
 
 void main() => runApp(MyApp());
 
@@ -76,6 +80,10 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 17, title: 'AnimatedList: 添加或删除，并伴有动画效果'),
       ListItem(value: 18, title: '读写文件: dart:io path_provider'),
       ListItem(value: 19, title: '网络请求: dio'),
+      ListItem(value: 20, title: 'platform channel'),
+      ListItem(value: 21, title: '文本、字体样式，按钮'),
+      ListItem(value: 22, title: '图片和 Icon '),
+      ListItem(value: 23, title: '单选开关和复选框'),
     ]);
   }
 
@@ -103,6 +111,10 @@ class _MyAppState extends State<MyApp> {
         'demo17': (BuildContext context) => AnimatedListSample(),
         'demo18': (BuildContext context) => ReadAndWriteFile(),
         'demo19': (BuildContext context) => HTTPRequest(),
+        'demo20': (BuildContext context) => PlatformChannelPage(),
+        'demo21': (BuildContext context) => Demo21(),
+        'demo22': (BuildContext context) => Demo22(),
+        'demo23': (BuildContext context) => SwitchAndCheckBox(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),
