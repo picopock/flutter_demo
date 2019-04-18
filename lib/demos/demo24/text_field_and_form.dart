@@ -232,7 +232,7 @@ class _TextFieldAndFormState extends State<TextFieldAndForm> {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
