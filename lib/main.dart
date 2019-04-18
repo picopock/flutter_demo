@@ -23,6 +23,7 @@ import './demos/demo20/platform_channel.dart';
 import './demos/demo21/demo21.dart';
 import './demos/demo22/demo22.dart';
 import './demos/demo23/demo23.dart';
+import './demos/demo24/text_field_and_form.dart';
 
 void main() => runApp(MyApp());
 
@@ -84,6 +85,7 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 21, title: '文本、字体样式，按钮'),
       ListItem(value: 22, title: '图片和 Icon '),
       ListItem(value: 23, title: '单选开关和复选框'),
+      ListItem(value: 24, title: '输入框和表单'),
     ]);
   }
 
@@ -115,6 +117,7 @@ class _MyAppState extends State<MyApp> {
         'demo21': (BuildContext context) => Demo21(),
         'demo22': (BuildContext context) => Demo22(),
         'demo23': (BuildContext context) => SwitchAndCheckBox(),
+        'demo24': (BuildContext context) => TextFieldAndForm(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),
