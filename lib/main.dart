@@ -25,6 +25,7 @@ import './demos/demo22/demo22.dart';
 import './demos/demo23/demo23.dart';
 import './demos/demo24/text_field_and_form.dart';
 import './demos/demo25/layout_page.dart';
+import './demos/demo26/container_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -88,6 +89,7 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 23, title: '单选开关和复选框'),
       ListItem(value: 24, title: '输入框和表单'),
       ListItem(value: 25, title: '布局'),
+      ListItem(value: 26, title: '容器类 Widgets'),
     ]);
   }
 
@@ -121,6 +123,7 @@ class _MyAppState extends State<MyApp> {
         'demo23': (BuildContext context) => SwitchAndCheckBox(),
         'demo24': (BuildContext context) => TextFieldAndForm(),
         'demo25': (BuildContext context) => LayoutPage(),
+        "demo26": (BuildContext context) => ContainerPage(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),
