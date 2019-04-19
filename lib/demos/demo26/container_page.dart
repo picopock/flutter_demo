@@ -78,10 +78,12 @@ class _ContainerPageState extends State<ContainerPage>
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.home),
+              onPressed: () {},
             ),
             SizedBox(),
             IconButton(
               icon: Icon(Icons.business),
+              onPressed: () {},
             ),
           ],
           mainAxisAlignment: MainAxisAlignment.spaceAround,
