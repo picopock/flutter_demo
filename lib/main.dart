@@ -26,6 +26,7 @@ import './demos/demo23/demo23.dart';
 import './demos/demo24/text_field_and_form.dart';
 import './demos/demo25/layout_page.dart';
 import './demos/demo26/container_page.dart';
+import './demos/demo27/scrollable_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -90,6 +91,7 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 24, title: '输入框和表单'),
       ListItem(value: 25, title: '布局'),
       ListItem(value: 26, title: '容器类 Widgets'),
+      ListItem(value: 27, title: '可滚动 Widgets'),
     ]);
   }
 
@@ -124,6 +126,7 @@ class _MyAppState extends State<MyApp> {
         'demo24': (BuildContext context) => TextFieldAndForm(),
         'demo25': (BuildContext context) => LayoutPage(),
         "demo26": (BuildContext context) => ContainerPage(),
+        "demo27": (BuildContext context) => ScrollablePage(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),

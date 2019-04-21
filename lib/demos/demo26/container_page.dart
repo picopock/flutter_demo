@@ -15,14 +15,13 @@ class _ContainerPageState extends State<ContainerPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _tabController = TabController(length: tabs.length, vsync: this);
   }
 
   @override
-  bool get wantKeeped => true;
+  bool get wantKeepAlive => true;
 
   void _onItemTapped(int index) {
     setState(() {
