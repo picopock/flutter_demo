@@ -29,6 +29,7 @@ import './demos/demo26/container_page.dart';
 import './demos/demo27/scrollable_page.dart';
 import './demos/demo28/functional_widget_page.dart';
 import './demos/demo29/event_notification_page.dart';
+import './demos/demo30/custom_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -96,6 +97,7 @@ class _MyAppState extends State<MyApp> {
       ListItem(value: 27, title: '可滚动 Widgets'),
       ListItem(value: 28, title: '功能型 Widgets'),
       ListItem(value: 29, title: '事件处理与通知'),
+      ListItem(value: 30, title: '自定义widget'),
     ]);
   }
 
@@ -133,6 +135,7 @@ class _MyAppState extends State<MyApp> {
         "demo27": (BuildContext context) => ScrollablePage(),
         "demo28": (BuildContext context) => FunctionalWidgetPage(),
         "demo29": (BuildContext context) => EventAndNotificationPage(),
+        "demo30": (BuildContext context) => CustomWidget(),
       },
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter demo collection')),
