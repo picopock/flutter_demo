@@ -58,7 +58,10 @@ class _CustomWidgetState extends State<CustomWidget> {
                 },
                 child: Text('逆时针旋转1/5圈'),
               ),
-              Text('CustomPaint 与 Canvas'),
+              Text(
+                'CustomPaint 与 Canvas',
+                style: TextStyle(fontSize: 32.0),
+              ),
               Gomoku(),
               Text('圆形渐变进度条'),
               GradientCircularProgressPage(),
