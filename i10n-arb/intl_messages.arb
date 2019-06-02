@@ -1,0 +1,217 @@
+{
+  "@@last_modified": "2019-06-02T18:45:32.018513",
+  "title": "Flutter App",
+  "@title": {
+    "description": "Title for the Demo application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "remainingEmailsMessage": "{howMany,plural, =0{There are no emails left}=1{There is {howMany} email left}other{There are {howMany} emails left}}",
+  "@remainingEmailsMessage": {
+    "description": "How many emails remain after archiving.",
+    "type": "text",
+    "placeholders": {
+      "howMany": {
+        "example": 42
+      }
+    }
+  },
+  "intl": "Flutter intl",
+  "@intl": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigation": "bottom navigation",
+  "@bottomNavigation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigationWithDocker": "bottom navigation with docker",
+  "@bottomNavigationWithDocker": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "routeAnimation": "route animation",
+  "@routeAnimation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "frostedGlass": "frosted glass effects",
+  "@frostedGlass": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "retainPageStatus": "retain page status",
+  "@retainPageStatus": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchBar": "search bar",
+  "@searchBar": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "wrapStreamingLayout": "wrap streaming layout",
+  "@wrapStreamingLayout": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "expandClosedCase": "expand closed case",
+  "@expandClosedCase": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bezierCurveCutting": "bezier curve cutting",
+  "@bezierCurveCutting": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "splashScreenAnimation": "splash screen animation",
+  "@splashScreenAnimation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rightArrawReturnPreviousPage": "Swipe right to return to the previous page",
+  "@rightArrawReturnPreviousPage": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tooltip": "Tooltip",
+  "@tooltip": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dragDrop": "Drag and drop",
+  "@dragDrop": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "roundAvatarRoundedEffect": "Round avatar and rounded effect",
+  "@roundAvatarRoundedEffect": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gridList": "Grid List",
+  "@gridList": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slidingOff": "Sliding off",
+  "@slidingOff": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "animatedList": "AnimatedList: add、remove、animation",
+  "@animatedList": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fileIO": "File io: dart:io path_provider",
+  "@fileIO": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "netRequest": "Net Request",
+  "@netRequest": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "platformChannel": "Platform Channel",
+  "@platformChannel": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "textFontStyleButton": "Text、Font Style、Button",
+  "@textFontStyleButton": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "imageIcon": "Image and Icon",
+  "@imageIcon": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "radioSwitchCheckBox": "Radio switch and check box",
+  "@radioSwitchCheckBox": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "inputBoxForm": "Input box and form",
+  "@inputBoxForm": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "layout": "Layout",
+  "@layout": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "containerWidget": "Container Widget",
+  "@containerWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollableWidget": "Scrollable Widget",
+  "@scrollableWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "functionalWidget": "Functional Widget",
+  "@functionalWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "eventHandlingNotification": "Event handling and notification",
+  "@eventHandlingNotification": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "customWidget": "Custom Widget",
+  "@customWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "useRedux": "Use Redux",
+  "@useRedux": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "i10n": "Intl",
+  "@i10n": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  }
+}

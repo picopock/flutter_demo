@@ -1,0 +1,218 @@
+{
+  "@@last_modified": "2019-06-02T15:25:44.542487",
+  "@@locale":"zh_CN",
+  "title": "Flutter 应用",
+  "@title": {
+    "description": "Title for the Demo application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "remainingEmailsMessage": "{howMany,plural, =0{没有未读邮件}=1{有{howMany}封未读邮件}other{有{howMany}封未读邮件}}",
+  "@remainingEmailsMessage": {
+    "description": "How many emails remain after archiving.",
+    "type": "text",
+    "placeholders": {
+      "howMany": {
+        "example": 42
+      }
+    }
+  },
+  "intl": "Flutter 国际化",
+  "@intl": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigation": "底部导航栏",
+  "@bottomNavigation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigationWithDocker": "带凹槽的底部导航栏",
+  "@bottomNavigationWithDocker": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "routeAnimation": "渐隐渐现的路由动画效果",
+  "@routeAnimation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "frostedGlass": "毛玻璃效果",
+  "@frostedGlass": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "retainPageStatus": "保留页面状态",
+  "@retainPageStatus": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchBar": "搜索条",
+  "@searchBar": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "wrapStreamingLayout": "Wrap 流式布局",
+  "@wrapStreamingLayout": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "expandClosedCase": "展开闭合案例",
+  "@expandClosedCase": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bezierCurveCutting": "贝塞尔曲线切割",
+  "@bezierCurveCutting": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "splashScreenAnimation": "打开应用的闪屏动画",
+  "@splashScreenAnimation": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rightArrawReturnPreviousPage": "右滑返回上一页",
+  "@rightArrawReturnPreviousPage": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tooltip": "Tooltip",
+  "@tooltip": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dragDrop": "拖拽",
+  "@dragDrop": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "roundAvatarRoundedEffect": "圆形头像和圆角效果",
+  "@roundAvatarRoundedEffect": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "gridList": "Grid List",
+  "@gridList": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "slidingOff": "滑动关闭",
+  "@slidingOff": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "animatedList": "AnimatedList: 添加或删除，并伴有动画效果",
+  "@animatedList": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fileIO": "读写文件: dart:io path_provider",
+  "@fileIO": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "netRequest": "网络请求: dio",
+  "@netRequest": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "platformChannel": "Platform Channel",
+  "@platformChannel": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "textFontStyleButton": "文本、字体样式，按钮",
+  "@textFontStyleButton": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "imageIcon": "图片和 Icon",
+  "@imageIcon": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "radioSwitchCheckBox": "单选开关和复选框'",
+  "@radioSwitchCheckBox": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "inputBoxForm": "输入框和表单",
+  "@inputBoxForm": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "layout": "布局",
+  "@layout": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "containerWidget": "容器类 Widgets",
+  "@containerWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollableWidget": "可滚动 Widgets",
+  "@scrollableWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "functionalWidget": "功能型 Widgets",
+  "@functionalWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "eventHandlingNotification": "事件处理与通知",
+  "@eventHandlingNotification": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "customWidget": "自定义 Widget",
+  "@customWidget": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "useRedux": "Use Redux",
+  "@useRedux": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "i10n": "国际化",
+  "@i10n": {
+    "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  }
+}

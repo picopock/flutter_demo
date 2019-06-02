@@ -14,16 +14,14 @@ void main() {
   );
 
   runApp(new FlutterReduxApp(
-    title: 'Flutter Redux Demo',
     store: store,
   ));
 }
 
 class FlutterReduxApp extends StatelessWidget {
   final Store<AppState> store;
-  final String title;
 
-  FlutterReduxApp({Key key, this.store, this.title}) : super(key: key);
+  FlutterReduxApp({Key key, this.store}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,7 @@ class FlutterReduxApp extends StatelessWidget {
     // ensure all routes have access to the store.
     return new StoreProvider<AppState>(
       store: store,
-      child: App(title: title),
+      child: App(),
     );
   }
 }

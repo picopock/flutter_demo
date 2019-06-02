@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:demo/i10n/localization_intl.dart' show AppLocalizations;
 
 import '../demos/demo1/bottom_navigation.dart';
 import '../demos/demo2/bottom_app_bar_demo.dart';
@@ -31,84 +33,16 @@ import '../demos/demo28/functional_widget_page.dart';
 import '../demos/demo29/event_notification_page.dart';
 import '../demos/demo30/custom_widget.dart';
 import '../demos/demo31/redux_demo_page.dart';
+import '../demos/demo32/intl_page.dart';
 
-class ListItem extends StatelessWidget {
-  final num value;
-  final String title;
-
-  ListItem({this.value, this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.pushNamed(context, 'demo$value');
-      },
-      child: Container(
-        alignment: Alignment.centerLeft,
-        padding: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
-        child: Text(title),
-      ),
-    );
-  }
-}
-
-class App extends StatefulWidget {
-  final String title;
-
-  App({Key key, this.title}) : super(key: key);
-
-  _AppState createState() => _AppState();
-}
-
-class _AppState extends State<App> {
-  final List<Widget> demos = [];
-
-  @override
-  void initState() {
-    super.initState();
-
-    demos.addAll([
-      ListItem(value: 1, title: '底部导航栏'),
-      ListItem(value: 2, title: '带凹槽的底部导航栏'),
-      ListItem(value: 3, title: '渐隐渐现的路由动画效果'),
-      ListItem(value: 4, title: '毛玻璃效果'),
-      ListItem(value: 5, title: '保留页面状态'),
-      ListItem(value: 6, title: '搜索条'),
-      ListItem(value: 7, title: 'Wrap 流式布局'),
-      ListItem(value: 8, title: '展开闭合案例'),
-      ListItem(value: 9, title: '贝塞尔曲线切割'),
-      ListItem(value: 10, title: '打开应用的闪屏动画'),
-      ListItem(value: 11, title: '右滑返回上一页'),
-      ListItem(value: 12, title: 'Tooltip'),
-      ListItem(value: 13, title: '拖拽'),
-      ListItem(value: 14, title: '圆形头像和圆角效果'),
-      ListItem(value: 15, title: 'Grid List'),
-      ListItem(value: 16, title: '滑动关闭'),
-      ListItem(value: 17, title: 'AnimatedList: 添加或删除，并伴有动画效果'),
-      ListItem(value: 18, title: '读写文件: dart:io path_provider'),
-      ListItem(value: 19, title: '网络请求: dio'),
-      ListItem(value: 20, title: 'platform channel'),
-      ListItem(value: 21, title: '文本、字体样式，按钮'),
-      ListItem(value: 22, title: '图片和 Icon '),
-      ListItem(value: 23, title: '单选开关和复选框'),
-      ListItem(value: 24, title: '输入框和表单'),
-      ListItem(value: 25, title: '布局'),
-      ListItem(value: 26, title: '容器类 Widgets'),
-      ListItem(value: 27, title: '可滚动 Widgets'),
-      ListItem(value: 28, title: '功能型 Widgets'),
-      ListItem(value: 29, title: '事件处理与通知'),
-      ListItem(value: 30, title: '自定义widget'),
-      ListItem(value: 31, title: 'Use Redux'),
-    ]);
-  }
-
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: widget.title,
+      // title: 'Flutter demo app'
+      onGenerateTitle: (context) {
+        return AppLocalizations.of(context).title;
+      },
       routes: {
         'demo1': (BuildContext context) => BottomNavigation(),
         'demo2': (BuildContext context) => BottomAppBarDemo(),
@@ -141,12 +75,114 @@ class _AppState extends State<App> {
         "demo29": (BuildContext context) => EventAndNotificationPage(),
         "demo30": (BuildContext context) => CustomWidget(),
         "demo31": (BuildContext context) => ReduxDemoPage(),
+        "demo32": (BuildContext context) => IntlPage(),
       },
-      home: Scaffold(
-        appBar: AppBar(title: Text('Flutter demo collection')),
-        body: ListView(
-          children: demos,
-        ),
+      home: HomePage(),
+      locale: Locale('zh', 'CN'),
+      localizationsDelegates: [
+        // 本地化的代理类
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        // 自定义
+        AppLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'), // 美国英语
+        const Locale('zh', 'CN'), // 中文简体
+        //其它Locales
+      ],
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(AppLocalizations.of(context).title)),
+      body: ListView(
+        children: [
+          ListItem(
+              value: 1, title: AppLocalizations.of(context).bottomNavigation),
+          ListItem(
+              value: 2,
+              title: AppLocalizations.of(context).bottomNavigationWithDocker),
+          ListItem(
+              value: 3, title: AppLocalizations.of(context).routeAnimation),
+          ListItem(value: 4, title: AppLocalizations.of(context).frostedGlass),
+          ListItem(
+              value: 5, title: AppLocalizations.of(context).retainPageStatus),
+          ListItem(value: 6, title: AppLocalizations.of(context).searchBar),
+          ListItem(
+              value: 7,
+              title: AppLocalizations.of(context).wrapStreamingLayout),
+          ListItem(
+              value: 8, title: AppLocalizations.of(context).expandClosedCase),
+          ListItem(
+              value: 9, title: AppLocalizations.of(context).bezierCurveCutting),
+          ListItem(
+              value: 10,
+              title: AppLocalizations.of(context).splashScreenAnimation),
+          ListItem(
+              value: 11,
+              title: AppLocalizations.of(context).rightArrawReturnPreviousPage),
+          ListItem(value: 12, title: AppLocalizations.of(context).tooltip),
+          ListItem(value: 13, title: AppLocalizations.of(context).dragDrop),
+          ListItem(
+              value: 14,
+              title: AppLocalizations.of(context).roundAvatarRoundedEffect),
+          ListItem(value: 15, title: AppLocalizations.of(context).gridList),
+          ListItem(value: 16, title: AppLocalizations.of(context).slidingOff),
+          ListItem(value: 17, title: AppLocalizations.of(context).animatedList),
+          ListItem(value: 18, title: AppLocalizations.of(context).fileIO),
+          ListItem(value: 19, title: AppLocalizations.of(context).netRequest),
+          ListItem(
+              value: 20, title: AppLocalizations.of(context).platformChannel),
+          ListItem(
+              value: 21,
+              title: AppLocalizations.of(context).textFontStyleButton),
+          ListItem(value: 22, title: AppLocalizations.of(context).imageIcon),
+          ListItem(
+              value: 23,
+              title: AppLocalizations.of(context).radioSwitchCheckBox),
+          ListItem(value: 24, title: AppLocalizations.of(context).inputBoxForm),
+          ListItem(value: 25, title: AppLocalizations.of(context).layout),
+          ListItem(
+              value: 26, title: AppLocalizations.of(context).containerWidget),
+          ListItem(
+              value: 27, title: AppLocalizations.of(context).scrollableWidget),
+          ListItem(
+              value: 28, title: AppLocalizations.of(context).functionalWidget),
+          ListItem(
+              value: 29,
+              title: AppLocalizations.of(context).eventHandlingNotification),
+          ListItem(value: 30, title: AppLocalizations.of(context).customWidget),
+          ListItem(value: 31, title: AppLocalizations.of(context).useRedux),
+          ListItem(value: 32, title: AppLocalizations.of(context).intl),
+        ],
+      ),
+    );
+  }
+}
+
+class ListItem extends StatelessWidget {
+  final num value;
+  final String title;
+
+  ListItem({this.value, this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, 'demo$value');
+      },
+      child: Container(
+        alignment: Alignment.centerLeft,
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
+        child: Text(title),
       ),
     );
   }
