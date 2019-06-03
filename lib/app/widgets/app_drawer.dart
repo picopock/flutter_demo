@@ -29,7 +29,7 @@ class AppDrawer extends StatelessWidget {
         });
   }
 
-  showThemeDialog(BuildContext context, Store store) {
+  Future showThemeDialog(BuildContext context, Store store) {
     onPressed(color) {
       final ThemeData themeData = ThemeData(primaryColor: color);
       return () {
@@ -40,6 +40,7 @@ class AppDrawer extends StatelessWidget {
 
     return showDialog(
         context: context,
+        barrierDismissible: true, // 点击蒙版是否返回，default： true
         builder: (BuildContext context) {
           return ThemeDialog(
             onPressed: onPressed,
