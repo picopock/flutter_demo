@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+
 import 'package:demo/i10n/localization_intl.dart' show AppLocalizations;
+import '../store/app.dart' show AppState;
 
 import '../demos/demo1/bottom_navigation.dart';
 import '../demos/demo2/bottom_app_bar_demo.dart';
@@ -38,59 +41,67 @@ import '../demos/demo32/intl_page.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // title: 'Flutter demo app'
-      onGenerateTitle: (context) {
-        return AppLocalizations.of(context).title;
+    return StoreConnector<AppState, Locale>(
+      converter: (store) {
+        return store.state.locale;
       },
-      routes: {
-        'demo1': (BuildContext context) => BottomNavigation(),
-        'demo2': (BuildContext context) => BottomAppBarDemo(),
-        'demo3': (BuildContext context) => FirstPage(),
-        'demo4': (BuildContext context) => FrostedGlass(),
-        'demo5': (BuildContext context) => KeepAlivePage(),
-        'demo6': (BuildContext context) => SearchBar(),
-        'demo7': (BuildContext context) => WrapDemo(),
-        'demo8': (BuildContext context) => ExpansionPanelListDemo(),
-        'demo9': (BuildContext context) => MyHomePage(),
-        'demo10': (BuildContext context) => SplashScreen(),
-        'demo11': (BuildContext context) => RightBackDemo(),
-        'demo12': (BuildContext context) => ToolTipDemo(),
-        'demo13': (BuildContext context) => DraggableDemo(),
-        'demo14': (BuildContext context) => CircleDemo(),
-        'demo15': (BuildContext context) => GridList(),
-        'demo16': (BuildContext context) => DismissiblePage(),
-        'demo17': (BuildContext context) => AnimatedListSample(),
-        'demo18': (BuildContext context) => ReadAndWriteFile(),
-        'demo19': (BuildContext context) => HTTPRequest(),
-        'demo20': (BuildContext context) => PlatformChannelPage(),
-        'demo21': (BuildContext context) => Demo21(),
-        'demo22': (BuildContext context) => Demo22(),
-        'demo23': (BuildContext context) => SwitchAndCheckBox(),
-        'demo24': (BuildContext context) => TextFieldAndForm(),
-        'demo25': (BuildContext context) => LayoutPage(),
-        "demo26": (BuildContext context) => ContainerPage(),
-        "demo27": (BuildContext context) => ScrollablePage(),
-        "demo28": (BuildContext context) => FunctionalWidgetPage(),
-        "demo29": (BuildContext context) => EventAndNotificationPage(),
-        "demo30": (BuildContext context) => CustomWidget(),
-        "demo31": (BuildContext context) => ReduxDemoPage(),
-        "demo32": (BuildContext context) => IntlPage(),
+      builder: (BuildContext context, Locale locale) {
+        return MaterialApp(
+          // title: 'Flutter demo app'
+          onGenerateTitle: (context) {
+            return AppLocalizations.of(context).title;
+          },
+          routes: {
+            'demo1': (BuildContext context) => BottomNavigation(),
+            'demo2': (BuildContext context) => BottomAppBarDemo(),
+            'demo3': (BuildContext context) => FirstPage(),
+            'demo4': (BuildContext context) => FrostedGlass(),
+            'demo5': (BuildContext context) => KeepAlivePage(),
+            'demo6': (BuildContext context) => SearchBar(),
+            'demo7': (BuildContext context) => WrapDemo(),
+            'demo8': (BuildContext context) => ExpansionPanelListDemo(),
+            'demo9': (BuildContext context) => MyHomePage(),
+            'demo10': (BuildContext context) => SplashScreen(),
+            'demo11': (BuildContext context) => RightBackDemo(),
+            'demo12': (BuildContext context) => ToolTipDemo(),
+            'demo13': (BuildContext context) => DraggableDemo(),
+            'demo14': (BuildContext context) => CircleDemo(),
+            'demo15': (BuildContext context) => GridList(),
+            'demo16': (BuildContext context) => DismissiblePage(),
+            'demo17': (BuildContext context) => AnimatedListSample(),
+            'demo18': (BuildContext context) => ReadAndWriteFile(),
+            'demo19': (BuildContext context) => HTTPRequest(),
+            'demo20': (BuildContext context) => PlatformChannelPage(),
+            'demo21': (BuildContext context) => Demo21(),
+            'demo22': (BuildContext context) => Demo22(),
+            'demo23': (BuildContext context) => SwitchAndCheckBox(),
+            'demo24': (BuildContext context) => TextFieldAndForm(),
+            'demo25': (BuildContext context) => LayoutPage(),
+            "demo26": (BuildContext context) => ContainerPage(),
+            "demo27": (BuildContext context) => ScrollablePage(),
+            "demo28": (BuildContext context) => FunctionalWidgetPage(),
+            "demo29": (BuildContext context) => EventAndNotificationPage(),
+            "demo30": (BuildContext context) => CustomWidget(),
+            "demo31": (BuildContext context) => ReduxDemoPage(),
+            "demo32": (BuildContext context) => IntlPage(),
+          },
+          home: HomePage(),
+          // locale: Locale('zh', 'CN'),
+          locale: locale,
+          localizationsDelegates: [
+            // 本地化的代理类
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            // 自定义
+            AppLocalizations.delegate,
+          ],
+          supportedLocales: [
+            const Locale('en', 'US'), // 美国英语
+            const Locale('zh', 'CN'), // 中文简体
+            //其它Locales
+          ],
+        );
       },
-      home: HomePage(),
-      locale: Locale('zh', 'CN'),
-      localizationsDelegates: [
-        // 本地化的代理类
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        // 自定义
-        AppLocalizations.delegate,
-      ],
-      supportedLocales: [
-        const Locale('en', 'US'), // 美国英语
-        const Locale('zh', 'CN'), // 中文简体
-        //其它Locales
-      ],
     );
   }
 }

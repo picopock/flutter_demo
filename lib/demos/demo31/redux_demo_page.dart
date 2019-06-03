@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 import '../../store/count.dart' show Actions;
-import '../../store/name.dart' show ChangeNameAction;
+import '../../store/user.dart'
+    show ChangeUserInfoAction, ChangeUserInfoActionTypes;
 import '../../store/app.dart' show AppState;
 
 typedef OnNameChangeCallback = Function(String name);
@@ -72,7 +73,10 @@ class _ReduxDemoPageState extends State<ReduxDemoPage> {
               child: StoreConnector<AppState, OnNameChangeCallback>(
                 converter: (store) {
                   return (String userName) {
-                    store.dispatch(ChangeNameAction(name: userName));
+                    store.dispatch(ChangeUserInfoAction(
+                      type: ChangeUserInfoActionTypes.Name,
+                      data: userName,
+                    ));
                   };
                 },
                 builder: (context, OnNameChangeCallback changeName) {
@@ -84,7 +88,7 @@ class _ReduxDemoPageState extends State<ReduxDemoPage> {
             ),
             StoreConnector<AppState, String>(
               converter: (store) {
-                return store.state.name.toString();
+                return store.state.userInfo.name;
               },
               builder: (context, String userName) {
                 return Text(

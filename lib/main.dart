@@ -6,22 +6,26 @@ import 'package:redux/redux.dart';
 import './app/app.dart';
 import './store/app.dart' show appReducer, AppState;
 import './store/count.dart' show CountState;
+import './store/user.dart' show UserInfo;
 
 void main() {
-  final store = new Store<AppState>(
-    appReducer,
-    initialState: AppState(count: CountState(count: 0), name: ''),
-  );
-
-  runApp(new FlutterReduxApp(
-    store: store,
-  ));
+  runApp(new FlutterReduxApp());
 }
 
 class FlutterReduxApp extends StatelessWidget {
-  final Store<AppState> store;
+  final store = new Store<AppState>(
+    appReducer,
+    initialState: AppState(
+      count: CountState(count: 0),
+      userInfo: UserInfo(
+        name: '',
+        age: 0,
+      ),
+      locale: Locale('zh', 'CN'),
+    ),
+  );
 
-  FlutterReduxApp({Key key, this.store}) : super(key: key);
+  FlutterReduxApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
