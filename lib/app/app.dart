@@ -44,7 +44,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StoreBuilder<AppState>(
-      builder: (BuildContext context, Store store) {
+      builder: (BuildContext context, Store<AppState> store) {
         return MaterialApp(
           // title: 'Flutter demo app'
           onGenerateTitle: (context) {

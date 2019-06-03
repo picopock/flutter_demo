@@ -8,7 +8,6 @@ import '../../store/locale.dart' show ChangeLocaleAction;
 import '../../store/theme.dart' show ChangeThemeDataAction;
 import '../../i10n/localization_intl.dart' show AppLocalizations;
 
-import './user_account_header.dart' show UserAccountHeader;
 import './theme_dialog.dart' show ThemeDialog;
 import './language_dialog.dart' show LanguageDialog;
 
@@ -53,68 +52,85 @@ class AppDrawer extends StatelessWidget {
     return StoreBuilder<AppState>(
       builder: (BuildContext context, Store store) {
         return Drawer(
-          child: Container(
-            child: SingleChildScrollView(
-              child: Container(
-                constraints: BoxConstraints(
-                  minHeight: MediaQuery.of(context).size.height,
-                ),
-                child: Column(
-                  children: <Widget>[
-                    UserAccountHeader(),
-                    ListTile(
-                      leading: Icon(Icons.language),
-                      title: Text(
-                        AppLocalizations.of(context).languageToggle,
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                      onTap: () {
-                        showLanguageDialog(context, store);
-                      },
+          child: SingleChildScrollView(
+            child: Container(
+              constraints: BoxConstraints(
+                minHeight: MediaQuery.of(context).size.height,
+              ),
+              child: Column(
+                children: <Widget>[
+                  DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
                     ),
-                    ListTile(
-                      leading: Icon(Icons.color_lens),
-                      title: Text(
-                        AppLocalizations.of(context).themeToggle,
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                      onTap: () {
-                        showThemeDialog(context, store);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.device_unknown),
-                      title: Text(
-                        AppLocalizations.of(context).about,
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                      onTap: () {},
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: Builder(
-                            builder: (context) {
-                              return Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                                child: RaisedButton(
-                                  color: Theme.of(context).primaryColor,
-                                  textColor: Colors.white,
-                                  padding: EdgeInsets.symmetric(vertical: 12.0),
-                                  child: Text(
-                                    AppLocalizations.of(context).signOut,
-                                    style: TextStyle(fontSize: 18.0),
-                                  ),
-                                  onPressed: () {},
-                                ),
-                              );
-                            },
+                    child: Center(
+                      child: SizedBox(
+                        width: 80.0,
+                        height: 80.0,
+                        child: CircleAvatar(
+                          child: Text(
+                            'A',
+                            style: TextStyle(
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.language),
+                    title: Text(
+                      AppLocalizations.of(context).languageToggle,
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                    onTap: () {
+                      showLanguageDialog(context, store);
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.color_lens),
+                    title: Text(
+                      AppLocalizations.of(context).themeToggle,
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                    onTap: () {
+                      showThemeDialog(context, store);
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.device_unknown),
+                    title: Text(
+                      AppLocalizations.of(context).about,
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                    onTap: () {},
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Builder(
+                          builder: (context) {
+                            return Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10.0),
+                              child: RaisedButton(
+                                color: Theme.of(context).primaryColor,
+                                textColor: Colors.white,
+                                padding: EdgeInsets.symmetric(vertical: 12.0),
+                                child: Text(
+                                  AppLocalizations.of(context).signOut,
+                                  style: TextStyle(fontSize: 18.0),
+                                ),
+                                onPressed: () {},
+                              ),
+                            );
+                          },
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
             ),
           ),

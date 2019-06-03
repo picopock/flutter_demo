@@ -7,7 +7,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(AppLocalizations.of(context).title)),
+      appBar: AppBar(
+        // 自定义打开 Drawer 按钮
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
+        title: Text(AppLocalizations.of(context).title),
+      ),
       body: ListView(
         children: [
           ListItem(
