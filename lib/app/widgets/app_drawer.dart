@@ -9,8 +9,8 @@ import '../../store/theme.dart' show ChangeThemeDataAction;
 import '../../i10n/localization_intl.dart' show AppLocalizations;
 
 import './user_account_header.dart' show UserAccountHeader;
-import './flex_language_button.dart' show FlexLanguageButton;
-import './flex_theme_button.dart' show FlexThemeButton;
+import './theme_dialog.dart' show ThemeDialog;
+import './language_dialog.dart' show LanguageDialog;
 
 class AppDrawer extends StatelessWidget {
   Future showLanguageDialog(BuildContext context, Store store) {
@@ -24,49 +24,9 @@ class AppDrawer extends StatelessWidget {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
-          return Center(
-            child: Container(
-              width: 250.0,
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  FlexLanguageButton(
-                    text: '简体中文',
-                    onPressed: onPressed(Locale('zh', 'CN')),
-                  ),
-                  FlexLanguageButton(
-                    text: 'English',
-                    onPressed: onPressed(Locale('en', 'US')),
-                  ),
-                ],
-              ),
-            ),
+          return LanguageDialog(
+            onPressed: onPressed,
           );
-          // return Material(
-          //   child: MediaQuery(
-          //     data: MediaQueryData.fromWindow(WidgetsBinding.instance.window)
-          //         .copyWith(textScaleFactor: 1),
-          //     child: new SafeArea(
-          //       child: Center(
-          //         child: Container(
-          //             width: 250.0,
-          //             height: 400.0,
-          //             child: Column(
-          //               children: <Widget>[
-          //                 ListTile(
-          //                   title: Text('简体中文'),
-          //                 )
-          //               ],
-          //             )),
-          //       ),
-          //     ),
-          //   ),
-          // );
         });
   }
 
@@ -82,48 +42,8 @@ class AppDrawer extends StatelessWidget {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
-          return Center(
-            child: Container(
-              width: 250.0,
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  FlexThemeButton(
-                    color: Colors.black,
-                    onPressed: onPressed(Colors.black),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.brown,
-                    onPressed: onPressed(Colors.brown),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.blueAccent,
-                    onPressed: onPressed(Colors.blueAccent),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.greenAccent,
-                    onPressed: onPressed(Colors.greenAccent),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.yellow,
-                    onPressed: onPressed(Colors.yellow),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.pinkAccent,
-                    onPressed: onPressed(Colors.pinkAccent),
-                  ),
-                  FlexThemeButton(
-                    color: Colors.redAccent,
-                    onPressed: onPressed(Colors.redAccent),
-                  ),
-                ],
-              ),
-            ),
+          return ThemeDialog(
+            onPressed: onPressed,
           );
         });
   }
@@ -168,9 +88,7 @@ class AppDrawer extends StatelessWidget {
                         AppLocalizations.of(context).about,
                         style: TextStyle(fontSize: 18.0),
                       ),
-                      onTap: () {
-                        showThemeDialog(context, store);
-                      },
+                      onTap: () {},
                     ),
                     Row(
                       children: <Widget>[
