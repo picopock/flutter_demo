@@ -16,13 +16,13 @@ class FlutterReduxApp extends StatelessWidget {
   final store = new Store<AppState>(
     appReducer,
     initialState: AppState(
-      count: CountState(count: 0),
-      userInfo: UserInfo(
-        name: '',
-        age: 0,
-      ),
-      locale: Locale('zh', 'CN'),
-    ),
+        count: CountState(count: 0),
+        userInfo: UserInfo(
+          name: '',
+          age: 0,
+        ),
+        locale: Locale('zh', 'CN'),
+        themeData: ThemeData()),
   );
 
   FlutterReduxApp({Key key}) : super(key: key);
