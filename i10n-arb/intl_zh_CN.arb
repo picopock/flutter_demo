@@ -214,5 +214,29 @@
     "description": "intl",
     "type": "text",
     "placeholders": {}
+  },
+  "languageToggle": "语言切换",
+  "@languageToggle": {
+    "description": "language toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeToggle": "主题切换",
+  "@themeToggle": {
+    "description": "theme toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "about": "关于",
+  "@about": {
+    "description": "about",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "退出登录",
+  "@signOut": {
+    "description": "sign out",
+    "type": "text",
+    "placeholders": {}
   }
 }

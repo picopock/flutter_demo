@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "about" : MessageLookupByLibrary.simpleMessage("关于"),
     "animatedList" : MessageLookupByLibrary.simpleMessage("AnimatedList: 添加或删除，并伴有动画效果"),
     "bezierCurveCutting" : MessageLookupByLibrary.simpleMessage("贝塞尔曲线切割"),
     "bottomNavigation" : MessageLookupByLibrary.simpleMessage("底部导航栏"),
@@ -41,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "imageIcon" : MessageLookupByLibrary.simpleMessage("图片和 Icon"),
     "inputBoxForm" : MessageLookupByLibrary.simpleMessage("输入框和表单"),
     "intl" : MessageLookupByLibrary.simpleMessage("Flutter 国际化"),
+    "languageToggle" : MessageLookupByLibrary.simpleMessage("语言切换"),
     "layout" : MessageLookupByLibrary.simpleMessage("布局"),
     "netRequest" : MessageLookupByLibrary.simpleMessage("网络请求: dio"),
     "platformChannel" : MessageLookupByLibrary.simpleMessage("Platform Channel"),
@@ -52,9 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "routeAnimation" : MessageLookupByLibrary.simpleMessage("渐隐渐现的路由动画效果"),
     "scrollableWidget" : MessageLookupByLibrary.simpleMessage("可滚动 Widgets"),
     "searchBar" : MessageLookupByLibrary.simpleMessage("搜索条"),
+    "signOut" : MessageLookupByLibrary.simpleMessage("退出登录"),
     "slidingOff" : MessageLookupByLibrary.simpleMessage("滑动关闭"),
     "splashScreenAnimation" : MessageLookupByLibrary.simpleMessage("打开应用的闪屏动画"),
     "textFontStyleButton" : MessageLookupByLibrary.simpleMessage("文本、字体样式，按钮"),
+    "themeToggle" : MessageLookupByLibrary.simpleMessage("主题切换"),
     "title" : MessageLookupByLibrary.simpleMessage("Flutter 应用"),
     "tooltip" : MessageLookupByLibrary.simpleMessage("Tooltip"),
     "useRedux" : MessageLookupByLibrary.simpleMessage("Use Redux"),

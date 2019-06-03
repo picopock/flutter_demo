@@ -111,6 +111,25 @@ class AppLocalizations {
   String get useRedux =>
       Intl.message('Use Redux', desc: 'intl', args: [], name: 'useRedux');
   String get i10n => Intl.message('Intl', desc: 'intl', args: [], name: 'i10n');
+
+  String get languageToggle {
+    return Intl.message('Language Toggle',
+        desc: 'language toggle', args: [], name: 'languageToggle');
+  }
+
+  String get themeToggle {
+    return Intl.message('Theme Toggle',
+        desc: 'theme toggle', args: [], name: 'themeToggle');
+  }
+
+  String get about {
+    return Intl.message('About', desc: 'about', args: [], name: 'about');
+  }
+
+  String get signOut {
+    return Intl.message('Sign Out',
+        desc: 'sign out', args: [], name: 'signOut');
+  }
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-06-02T18:45:32.018513",
+  "@@last_modified": "2019-06-03T17:44:57.951845",
   "title": "Flutter App",
   "@title": {
     "description": "Title for the Demo application",
@@ -211,6 +211,30 @@
   "i10n": "Intl",
   "@i10n": {
     "description": "intl",
+    "type": "text",
+    "placeholders": {}
+  },
+  "languageToggle": "Language Toggle",
+  "@languageToggle": {
+    "description": "language toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeToggle": "Theme Toggle",
+  "@themeToggle": {
+    "description": "theme toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "about": "About",
+  "@about": {
+    "description": "about",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "Sign Out",
+  "@signOut": {
+    "description": "sign out",
     "type": "text",
     "placeholders": {}
   }

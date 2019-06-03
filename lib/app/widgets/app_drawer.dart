@@ -6,6 +6,8 @@ import 'package:redux/redux.dart' show Store;
 import '../../store/app.dart' show AppState;
 import '../../store/locale.dart' show ChangeLocaleAction;
 import '../../store/theme.dart' show ChangeThemeDataAction;
+import '../../i10n/localization_intl.dart' show AppLocalizations;
+
 import './user_account_header.dart' show UserAccountHeader;
 import './flex_language_button.dart' show FlexLanguageButton;
 import './flex_theme_button.dart' show FlexThemeButton;
@@ -92,37 +94,30 @@ class AppDrawer extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   FlexThemeButton(
-                    text: '默认主题',
                     color: Colors.black,
                     onPressed: onPressed(Colors.black),
                   ),
                   FlexThemeButton(
-                    text: '主题一',
                     color: Colors.brown,
                     onPressed: onPressed(Colors.brown),
                   ),
                   FlexThemeButton(
-                    text: '主题二',
                     color: Colors.blueAccent,
                     onPressed: onPressed(Colors.blueAccent),
                   ),
                   FlexThemeButton(
-                    text: '主题三',
                     color: Colors.greenAccent,
                     onPressed: onPressed(Colors.greenAccent),
                   ),
                   FlexThemeButton(
-                    text: '主题四',
                     color: Colors.yellow,
                     onPressed: onPressed(Colors.yellow),
                   ),
                   FlexThemeButton(
-                    text: '主题五',
                     color: Colors.pinkAccent,
                     onPressed: onPressed(Colors.pinkAccent),
                   ),
                   FlexThemeButton(
-                    text: '主题六',
                     color: Colors.redAccent,
                     onPressed: onPressed(Colors.redAccent),
                   ),
@@ -149,21 +144,30 @@ class AppDrawer extends StatelessWidget {
                     UserAccountHeader(),
                     ListTile(
                       leading: Icon(Icons.language),
-                      title: Text('语言切换', style: TextStyle(fontSize: 18.0)),
+                      title: Text(
+                        AppLocalizations.of(context).languageToggle,
+                        style: TextStyle(fontSize: 18.0),
+                      ),
                       onTap: () {
                         showLanguageDialog(context, store);
                       },
                     ),
                     ListTile(
                       leading: Icon(Icons.color_lens),
-                      title: Text('主题切换', style: TextStyle(fontSize: 18.0)),
+                      title: Text(
+                        AppLocalizations.of(context).themeToggle,
+                        style: TextStyle(fontSize: 18.0),
+                      ),
                       onTap: () {
                         showThemeDialog(context, store);
                       },
                     ),
                     ListTile(
                       leading: Icon(Icons.device_unknown),
-                      title: Text('关于', style: TextStyle(fontSize: 18.0)),
+                      title: Text(
+                        AppLocalizations.of(context).about,
+                        style: TextStyle(fontSize: 18.0),
+                      ),
                       onTap: () {
                         showThemeDialog(context, store);
                       },
@@ -179,7 +183,10 @@ class AppDrawer extends StatelessWidget {
                                   color: Theme.of(context).primaryColor,
                                   textColor: Colors.white,
                                   padding: EdgeInsets.symmetric(vertical: 12.0),
-                                  child: Text('退出登录'),
+                                  child: Text(
+                                    AppLocalizations.of(context).signOut,
+                                    style: TextStyle(fontSize: 18.0),
+                                  ),
                                   onPressed: () {},
                                 ),
                               );

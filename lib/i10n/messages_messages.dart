@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "about" : MessageLookupByLibrary.simpleMessage("About"),
     "animatedList" : MessageLookupByLibrary.simpleMessage("AnimatedList: add、remove、animation"),
     "bezierCurveCutting" : MessageLookupByLibrary.simpleMessage("bezier curve cutting"),
     "bottomNavigation" : MessageLookupByLibrary.simpleMessage("bottom navigation"),
@@ -41,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "imageIcon" : MessageLookupByLibrary.simpleMessage("Image and Icon"),
     "inputBoxForm" : MessageLookupByLibrary.simpleMessage("Input box and form"),
     "intl" : MessageLookupByLibrary.simpleMessage("Flutter intl"),
+    "languageToggle" : MessageLookupByLibrary.simpleMessage("Language Toggle"),
     "layout" : MessageLookupByLibrary.simpleMessage("Layout"),
     "netRequest" : MessageLookupByLibrary.simpleMessage("Net Request"),
     "platformChannel" : MessageLookupByLibrary.simpleMessage("Platform Channel"),
@@ -52,9 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "routeAnimation" : MessageLookupByLibrary.simpleMessage("route animation"),
     "scrollableWidget" : MessageLookupByLibrary.simpleMessage("Scrollable Widget"),
     "searchBar" : MessageLookupByLibrary.simpleMessage("search bar"),
+    "signOut" : MessageLookupByLibrary.simpleMessage("Sign Out"),
     "slidingOff" : MessageLookupByLibrary.simpleMessage("Sliding off"),
     "splashScreenAnimation" : MessageLookupByLibrary.simpleMessage("splash screen animation"),
     "textFontStyleButton" : MessageLookupByLibrary.simpleMessage("Text、Font Style、Button"),
+    "themeToggle" : MessageLookupByLibrary.simpleMessage("Theme Toggle"),
     "title" : MessageLookupByLibrary.simpleMessage("Flutter App"),
     "tooltip" : MessageLookupByLibrary.simpleMessage("Tooltip"),
     "useRedux" : MessageLookupByLibrary.simpleMessage("Use Redux"),
