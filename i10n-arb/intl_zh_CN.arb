@@ -155,7 +155,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "radioSwitchCheckBox": "单选开关和复选框'",
+  "radioSwitchCheckBox": "单选开关和复选框",
   "@radioSwitchCheckBox": {
     "description": "intl",
     "type": "text",

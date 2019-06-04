@@ -46,7 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "layout" : MessageLookupByLibrary.simpleMessage("布局"),
     "netRequest" : MessageLookupByLibrary.simpleMessage("网络请求: dio"),
     "platformChannel" : MessageLookupByLibrary.simpleMessage("Platform Channel"),
-    "radioSwitchCheckBox" : MessageLookupByLibrary.simpleMessage("单选开关和复选框\'"),
+    "radioSwitchCheckBox" : MessageLookupByLibrary.simpleMessage("单选开关和复选框"),
     "remainingEmailsMessage" : m0,
     "retainPageStatus" : MessageLookupByLibrary.simpleMessage("保留页面状态"),
     "rightArrawReturnPreviousPage" : MessageLookupByLibrary.simpleMessage("右滑返回上一页"),
